@@ -1,0 +1,9 @@
+<h1>Profile Edit</h1>
+
+
+<form action='/update/{{data.id}}' method=POST>
+  Name:  <input type="text" name="name" value="{{data.name}}"><br>
+  Breed: <input type="text" name="breed" value="{{data.breed}}">
+  <input type="hidden" name="id" value="{{data.id}}"><br>
+  <button type="submit">Update</button>
+</form>

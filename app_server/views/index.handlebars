@@ -1,0 +1,21 @@
+<h1>Mitt Romney's Adult Furry Friend Binder</h1>
+<ul>
+  {{#each mittRomneyList}}
+    <li>Name:  {{this.name}}<br>
+        Breed: {{this.breed}}<br>
+        <form action='/delete' method='POST'>
+          <input type="hidden" name="id" value="{{this.id}}"/>
+          <button type="submit">Remove</button>
+        </form>
+        <form action='/edit/:id' method='GET'>
+          <a href="/edit/{{this.id}}">Edit</a>
+        </form>
+      </li><br>
+  {{/each}}
+</ul>
+
+<form action='/create' method='POST'>
+  <input type="text" placeholder="name" name="name"></input><br>
+  <input type="text" placeholder="breed" name="breed"></input>
+  <button type="submit">Admit New Furry Guest</button>
+</form>
